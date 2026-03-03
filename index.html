@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chetan Babu Bhat | AI/ML & Full Stack Engineer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── LOADER ── -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">CBB</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Initialising Experience…</p>
+    </div>
+  </div>
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ── THREE.JS CANVAS ── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>CBB<span class="brand-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-greeting reveal-up">
+        <span class="greeting-line"></span>
+        <span>Hello, World! 👋</span>
+        <span class="greeting-line"></span>
+      </div>
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">Chetan Babu</span>
+        <span class="name-line accent-gradient">Bhat</span>
+      </h1>
+      <div class="hero-typed-wrap reveal-up">
+        <span class="typed-prefix">&gt;_</span>
+        <span id="typed-output"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-bio reveal-up">
+        Building intelligent systems &amp; scalable applications that push the boundaries of
+        what software can achieve. From neural networks to production APIs — I engineer
+        the future.
+      </p>
+      <div class="hero-buttons reveal-up">
+        <a href="#projects" class="btn btn-primary">
+          <span>Explore Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Let's Talk</span>
+        </a>
+        <a href="resume.pdf" class="btn btn-outline" target="_blank">
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-3d-wrap reveal-right">
+      <div class="hero-3d-card" id="heroCard">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="avatar-ring">
+            <div class="avatar-initials">CBB</div>
+          </div>
+          <div class="card-role-tags">
+            <span class="role-tag">AI / ML</span>
+            <span class="role-tag">Full Stack</span>
+            <span class="role-tag">Node.js</span>
+          </div>
+          <div class="card-code-block">
+            <div class="code-dot red"></div>
+            <div class="code-dot yellow"></div>
+            <div class="code-dot green"></div>
+            <pre><code class="code-snippet"><span class="c-kw">const</span> engineer = {
+  name: <span class="c-str">"Chetan"</span>,
+  stack: [<span class="c-str">"AI"</span>, <span class="c-str">"Node"</span>, <span class="c-str">"React"</span>],
+  passion: <span class="c-str">"Building ∞"</span>,
+  available: <span class="c-bool">true</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-container">
+      <div class="section-tag reveal-up">About Me</div>
+      <h2 class="section-title reveal-up">The Engineer Behind<br /><span class="accent-gradient">The Code</span></h2>
+
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-3d-scene" id="aboutScene">
+            <div class="orbit-ring ring-1">
+              <div class="orbit-icon"><i class="fab fa-python"></i></div>
+            </div>
+            <div class="orbit-ring ring-2">
+              <div class="orbit-icon"><i class="fab fa-node-js"></i></div>
+            </div>
+            <div class="orbit-ring ring-3">
+              <div class="orbit-icon"><i class="fab fa-react"></i></div>
+            </div>
+            <div class="orbit-center">
+              <span>CBB</span>
+            </div>
+          </div>
+          <div class="about-badge badge-1">
+            <i class="fas fa-brain"></i>
+            <span>AI / ML</span>
+          </div>
+          <div class="about-badge badge-2">
+            <i class="fas fa-server"></i>
+            <span>Backend</span>
+          </div>
+          <div class="about-badge badge-3">
+            <i class="fas fa-layer-group"></i>
+            <span>Full Stack</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <p class="about-lead">
+            I'm <strong>Chetan Babu Bhat</strong>, a Computer Engineer specialising in
+            <em>Artificial Intelligence, Machine Learning,</em> and <em>Full Stack Development</em>.
+          </p>
+          <p class="about-body">
+            My journey started at the intersection of hardware and software, evolving into a deep
+            passion for intelligent systems. I architect end-to-end solutions — from training 
+            large-scale ML models to deploying production-grade APIs with Node.js and crafting 
+            seamless front-end experiences.
+          </p>
+          <p class="about-body">
+            I thrive in environments that demand creative problem-solving, performance optimisation,
+            and cutting-edge technology adoption. Whether it's a neural network that predicts 
+            market trends or a real-time collaborative platform — I build with precision and scale 
+            in mind.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Nepal</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Pokhara University</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-code"></i>
+              <span>Open to Opportunities</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <span>Nepali, Hindi, English</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary"><span>Work With Me</span><i class="fas fa-arrow-right"></i></a>
+            <div class="social-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-tag reveal-up">Technical Arsenal</div>
+      <h2 class="section-title reveal-up">Skills & <span class="accent-gradient">Technologies</span></h2>
+      <p class="section-sub reveal-up">A curated toolkit built over years of real-world engineering.</p>
+
+      <div class="skills-categories reveal-up">
+        <button class="skill-cat active" data-cat="all">All</button>    
+        <button class="skill-cat" data-cat="ai">AI / ML</button>
+        <button class="skill-cat" data-cat="backend">Backend</button>
+        <button class="skill-cat" data-cat="frontend">Frontend</button>
+        <button class="skill-cat" data-cat="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- AI/ML -->
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          <span class="skill-pct">95%</span>
+        </div>
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon tf-icon">TF</div>
+          <span class="skill-name">TensorFlow</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon pt-icon">PT</div>
+          <span class="skill-name">PyTorch</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon sk-icon">SK</div>
+          <span class="skill-name">Scikit-Learn</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon cv-icon">CV</div>
+          <span class="skill-name">OpenCV</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="skill-card" data-cat="ai" data-tilt>
+          <div class="skill-icon lm-icon">LLM</div>
+          <span class="skill-name">LLM / GenAI</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <span class="skill-pct">82%</span>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+          <span class="skill-name">Node.js</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon ex-icon">EX</div>
+          <span class="skill-name">Express.js</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <span class="skill-name">MongoDB</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+          <span class="skill-pct">87%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon pg-icon">PG</div>
+          <span class="skill-name">PostgreSQL</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <span class="skill-pct">82%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon rd-icon">RD</div>
+          <span class="skill-name">Redis</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          <span class="skill-pct">78%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-tilt>
+          <div class="skill-icon rest-icon">API</div>
+          <span class="skill-name">REST / GraphQL</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="91"></div></div>
+          <span class="skill-pct">91%</span>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-card" data-cat="frontend" data-tilt>
+          <div class="skill-icon"><i class="fab fa-react"></i></div>
+          <span class="skill-name">React.js</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-tilt>
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+          <span class="skill-pct">93%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-tilt>
+          <div class="skill-icon ts-icon">TS</div>
+          <span class="skill-name">TypeScript</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-tilt>
+          <div class="skill-icon nxt-icon">NX</div>
+          <span class="skill-name">Next.js</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+          <span class="skill-pct">83%</span>
+        </div>
+        <!-- Tools -->
+        <div class="skill-card" data-cat="tools" data-tilt>
+          <div class="skill-icon"><i class="fab fa-docker"></i></div>
+          <span class="skill-name">Docker</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-tilt>
+          <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+          <span class="skill-name">Git</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-tilt>
+          <div class="skill-icon aws-icon">AWS</div>
+          <span class="skill-name">AWS</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <span class="skill-pct">75%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-tilt>
+          <div class="skill-icon k8-icon">K8</div>
+          <span class="skill-name">Kubernetes</span>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-tag reveal-up">Portfolio</div>
+      <h2 class="section-title reveal-up">Featured <span class="accent-gradient">Projects</span></h2>
+      <p class="section-sub reveal-up">Handpicked projects that demonstrate depth, creativity, and engineering excellence.</p>
+
+      <div class="projects-grid">
+
+        <!-- Final Year -->
+        <div class="project-card featured reveal-up" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-num">01</div>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-badge">Final Year · 2025–2026</div>
+            <h3 class="project-title">Comparative Analysis of Insider Threat Detection Using LSTM, TCN &amp; GRU</h3>
+            <p class="project-desc">
+              Deep-learning research project benchmarking LSTM, Temporal Convolutional Network (TCN),
+              and GRU architectures on the CERT Insider Threat Dataset. Designed preprocessing pipeline,
+              handled class imbalance, and evaluated models across F1, AUC-ROC, and recall.
+              Hybrid LSTM-GRU achieved best results, surpassing baselines by 12% in F1-score.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Python</span><span>LSTM</span><span>TCN</span><span>GRU</span>
+              <span>TensorFlow</span><span>Cybersecurity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Year -->
+        <div class="project-card featured reveal-up" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-num">02</div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-badge">Third Year · 2024–2025</div>
+            <h3 class="project-title">Stock Market Analysis &amp; Prediction</h3>
+            <p class="project-desc">
+              Full-stack platform for NEPSE stock data ingestion, technical indicator computation,
+              and price trend forecasting using LSTM and Transformer models (~91% directional accuracy).
+              Includes a React dashboard with live charts, prediction overlays, portfolio simulation,
+              and NLP sentiment analysis from news headlines.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Python</span><span>LSTM</span><span>Transformer</span>
+              <span>React</span><span>Node.js</span><span>NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Year -->
+        <div class="project-card reveal-up" data-tilt>
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-num">03</div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-badge">Second Year · 2023–2024</div>
+            <h3 class="project-title">FIthub — Fitness &amp; Workout Hub</h3>
+            <p class="project-desc">
+              Feature-rich fitness web platform with personalised workout plans, exercise library,
+              nutrition tracking, and progress analytics. Built with Node.js REST API, MongoDB,
+              JWT auth, real-time notifications, and a responsive React UI with performance charts.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Node.js</span><span>React</span><span>MongoDB</span>
+              <span>Express</span><span>JWT</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+  ════════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-tag reveal-up">Journey</div>
+      <h2 class="section-title reveal-up">Academic Projects &amp; <span class="accent-gradient">Education</span></h2>
+
+      <div class="timeline">
+
+        <!-- Final Year Project -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" data-tilt>
+            <div class="tl-header">
+              <div>
+                <span class="tl-date">2025 – 2026 · Final Year Project</span>
+                <h3 class="tl-role">Comparative Analysis of Insider Threat Detection</h3>
+                <span class="tl-company"><i class="fas fa-university"></i> Pokhara University</span>
+              </div>
+              <div class="tl-badge current">Current</div>
+            </div>
+            <ul class="tl-points">
+              <li>Conducted an in-depth comparative analysis of deep learning models — LSTM, TCN, and GRU — for detecting insider threats in enterprise environments</li>
+              <li>Built end-to-end data preprocessing pipeline on the CERT Insider Threat Dataset with feature engineering and class-imbalance handling</li>
+              <li>Benchmarked all three architectures across accuracy, precision, recall, F1 and AUC-ROC; identified optimal model configurations per threat category</li>
+              <li>Achieved best results with a hybrid LSTM-GRU approach, outperforming baseline classifiers by over 12% in F1-score</li>
+            </ul>
+            <div class="tl-tags"><span>Python</span><span>LSTM</span><span>TCN</span><span>GRU</span><span>TensorFlow</span><span>Cybersecurity</span></div>
+          </div>
+        </div>
+
+        <!-- Third Year Project -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" data-tilt>
+            <div class="tl-header">
+              <div>
+                <span class="tl-date">2024 – 2025 · Third Year Project</span>
+                <h3 class="tl-role">Stock Market Analysis &amp; Prediction</h3>
+                <span class="tl-company"><i class="fas fa-university"></i> Pokhara University</span>
+              </div>
+            </div>
+            <ul class="tl-points">
+              <li>Designed a full-stack platform for real-time stock data ingestion, technical indicator computation, and price trend forecasting</li>
+              <li>Trained LSTM and Transformer-based models on historical NEPSE data achieving ~91% directional accuracy on next-day close price</li>
+              <li>Built interactive React dashboard with live charts, prediction overlays, and portfolio simulation tools</li>
+              <li>Integrated news sentiment analysis (NLP) to correlate market movement with headline sentiment scores</li>
+            </ul>
+            <div class="tl-tags"><span>Python</span><span>LSTM</span><span>React</span><span>Node.js</span><span>NEPSE API</span><span>NLP</span></div>
+          </div>
+        </div>
+
+        <!-- Second Year Project -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card" data-tilt>
+            <div class="tl-header">
+              <div>
+                <span class="tl-date">2023 – 2024 · Second Year Project</span>
+                <h3 class="tl-role">FIthub — Fitness &amp; Workout Hub</h3>
+                <span class="tl-company"><i class="fas fa-university"></i> Pokhara University</span>
+              </div>
+            </div>
+            <ul class="tl-points">
+              <li>Developed a full-featured fitness platform with personalised workout plans, progress tracking, and exercise library</li>
+              <li>Built RESTful backend with Node.js &amp; Express; designed MongoDB schema for user profiles, workout logs, and nutrition data</li>
+              <li>Implemented JWT authentication, role-based access, and real-time notification system</li>
+              <li>Delivered responsive React UI with dynamic charts showing weekly/monthly performance analytics</li>
+            </ul>
+            <div class="tl-tags"><span>Node.js</span><span>React</span><span>MongoDB</span><span>Express</span><span>JWT</span></div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot edu"></div>
+          <div class="timeline-card" data-tilt>
+            <div class="tl-header">
+              <div>
+                <span class="tl-date">2022 – 2026</span>
+                <h3 class="tl-role">B.E. Computer Engineering</h3>
+                <span class="tl-company"><i class="fas fa-university"></i> Pokhara University, Nepal</span>
+              </div>
+              <div class="tl-badge edu-badge">Education</div>
+            </div>
+            <ul class="tl-points">
+              <li>CGPA: 3 / 4 — consistent academic performance with focus on AI, ML, and Software Engineering</li>
+              <li>Specialisation in Artificial Intelligence, Machine Learning, and Full Stack Development</li>
+              <li>Completed 3 major engineering projects spanning fitness tech, financial prediction, and cybersecurity</li>
+            </ul>
+            <div class="tl-tags"><span>Computer Engineering</span><span>AI / ML</span><span>Pokhara University</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-tag reveal-up">Get In Touch</div>
+      <h2 class="section-title reveal-up">Let's Build Something<br /><span class="accent-gradient">Extraordinary</span></h2>
+      <p class="section-sub reveal-up">Whether you have a project, role, or just want to connect — my inbox is always open.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <h3>Open for opportunities</h3>
+            <p>I'm currently looking for new challenges — full-time positions, freelance projects, 
+               or exciting collaborations in AI/ML and Full Stack engineering.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="ci-label">Email</span>
+                  <a href="mailto:chetan@example.com" class="ci-value">chetan@example.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <span class="ci-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/" target="_blank" class="ci-value">/in/chetanbabubhat</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <span class="ci-label">GitHub</span>
+                  <a href="https://github.com/" target="_blank" class="ci-value">github.com/chetanbhat</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" placeholder="Project Inquiry / Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="brand-bracket">&lt;</span>CBB<span class="brand-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">© 2026 Chetan Babu Bhat · Designed &amp; Engineered with ❤️</p>
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
