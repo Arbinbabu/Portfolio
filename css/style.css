@@ -519,7 +519,7 @@ section {
 
 .hero-3d-card {
   position: relative;
-  width: 300px;
+  width: 390px;
   background: var(--glass);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
@@ -551,16 +551,18 @@ section {
 }
 
 .avatar-ring {
-  width: 80px;
-  height: 80px;
+  width: 184px;
+  height: 184px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), var(--purple));
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0,212,255,0.3);
+  box-shadow: 0 0 42px rgba(0,212,255,0.45), 0 0 80px rgba(123,47,255,0.25);
   animation: avatarFloat 3s ease-in-out infinite;
+  overflow: hidden;
 }
 
 @keyframes avatarFloat {
@@ -573,6 +575,24 @@ section {
   font-weight: 800;
   color: #fff;
   letter-spacing: 2px;
+  display: none;
+}
+
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.8);
+  filter: saturate(1.08) contrast(1.05);
+}
+
+.avatar-ring.show-fallback .avatar-photo {
+  display: none;
+}
+
+.avatar-ring.show-fallback .avatar-initials {
+  display: block;
 }
 
 .card-role-tags {
@@ -1400,6 +1420,8 @@ footer {
   .nav-toggle { display: flex; }
 
   .hero-name { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero-3d-card { width: min(390px, 94vw); }
+  .avatar-ring { width: 160px; height: 160px; }
   .projects-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -1415,5 +1437,7 @@ footer {
   .skills-grid { grid-template-columns: 1fr; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-stats { flex-direction: column; gap: 1rem; }
+  .hero-3d-card { width: min(340px, 94vw); }
+  .avatar-ring { width: 136px; height: 136px; }
   .stat-divider { display: none; }
 }

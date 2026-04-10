@@ -213,15 +213,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* Profile photo fallback */
+  const profilePhoto = document.getElementById('profilePhoto');
+  const avatarRing = profilePhoto ? profilePhoto.closest('.avatar-ring') : null;
+
+  if (profilePhoto && avatarRing) {
+    profilePhoto.addEventListener('error', () => {
+      avatarRing.classList.add('show-fallback');
+    });
+
+    profilePhoto.addEventListener('load', () => {
+      avatarRing.classList.remove('show-fallback');
+    });
+  }
+
   /* ══════════════════════════════════════════════════════
      5. TYPED.JS — inline typewriter
   ══════════════════════════════════════════════════════ */
   const typedEl = document.getElementById('typed-output');
   const words   = [
     'Computer Engineer',
-    'AI / ML Engineer',
-    'Full Stack Developer',
-    'Node.js Architect',
+    'Web Developer',
+    'Cloud / DevOps Enthusiast',
+    'Networking Enthusiast',
     'Problem Solver',
   ];
   let wIdx = 0, cIdx = 0, deleting = false;
